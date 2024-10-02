@@ -1,2 +1,5 @@
 env/
 .venv/
+food_delivery_dataset/
+
+food-delivery-dataset.*
