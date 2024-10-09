@@ -1,8 +1,11 @@
-## Name                    UBID <br />
-Apurva Banka  -        50610491 <br />
-Raj Kumar Alikatte  -  50600978 <br />
-Patanjali Uppugandla - 50587096 <br />
-Sai Harshitha Karri  - 50604558 <br />
+## Members
+
+| Name                 | UB ID     |
+|----------------------|-----------|
+| Apurva Banka         |  50610491 |
+| Raj Kumar Alikatte   |  50600978 | 
+| Patanjali Uppugandla |  50587096 | 
+| Sai Harshitha Karri  |  50604558 |
 
 # Forcaster
 Using TimeSeries Forecasting To Predict Order Patterns For Restaurants
