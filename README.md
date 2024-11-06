@@ -44,3 +44,18 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
   - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Apurva/forecasting.ipynb
   - The file contains implementation for Time Series Forecasting for a bigger dataset.
   - Here we see the difference in continiuity of the graph when the dataset size increases.
+
+ # Questions for Raj Kumar Alikatte
+ -
+ -
+ -
+
+ # Questions for Sai Harshitha Karri
+ -
+ -
+ -
+
+ # Questions for Patanjali Uppugandla
+ -
+ -
+ -
