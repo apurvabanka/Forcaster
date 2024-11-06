@@ -61,6 +61,7 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
    - code Analysis - 
  
  # Questions for Patanjali Uppugandla
- -
- -
+ - Hypothesis 1 - The delivery timings in the Evening would be higher compared to other parts of the day (like Morning, Afternoon, Night), especially when road 
+   traffic density is high or multiple deliveries are being handled by the delivery person.
+ - Hypothesis 2 - The Order preparation time for various types of orders would be longer in the peak hours, day, how far the restaurant is located from the ordered place and the weather.
  -
