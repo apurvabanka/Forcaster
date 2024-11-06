@@ -20,8 +20,27 @@ For our project, we are planning to use the "Food Delivery Dataset" available on
 
 Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 
-## Steps to achieve
 
-- Loading the dataset directly from Kaggle and filtering the required fields based on the given data.
-- Analysing different time-series models to understand the best fit.
-- Making conclusions and determining patterns based on the finding from different models.
+## Folder Structure
+
+- All the reports are present in the `Report` folder. Every file is following the naming convension <First_name>_<Last_name>_<Phase_number>.pdf
+- There are folders named for each individual. The folders follow the naming convension <First_name>. All the codes are inside the folder.
+
+
+# Questions for Apurva Banka
+- Hypothesis 1 - If the time taken for the order increases, the average rating decreases.
+   - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Apurva/regression_for_rating.ipynb
+   - The file contains the multiple Regression models used to fit the data.
+   - The accuracy calculation is done for each model to determine the best model.
+- Hypothesis 2 - If the distance increases, the time taken to deliver the order incrases.
+   - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Apurva/clustering_for_coordinates.ipynb
+   - The file contains different clustering models used to cluster the data points.
+   - We have leaveraged Elbow method to determine the optimal number of clusters.
+- Time Series Forecasting
+  - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Apurva/forecasting_current_dataset.ipynb
+  - The file contains implementation for Time Series Forecasting for predicting the number of orders.
+  - We have used SARIMA model to predict the number of orders on a daily basis.
+- Time Series Forecasting for Bigger Dataset
+  - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Apurva/forecasting.ipynb
+  - The file contains implementation for Time Series Forecasting for a bigger dataset.
+  - Here we see the difference in continiuity of the graph when the dataset size increases.
