@@ -46,14 +46,14 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
   - Here we see the difference in continiuity of the graph when the dataset size increases.
 
  # Questions for Raj Kumar Alikatte
+ -Hypothesis 1 - Motorcycles are able to do multiple deliveries compare to bicycle, electric_scooter and scooter.
  -
- -
- -
+ -Hypothesis 2 - The Weather conditions impact the time taken to deliver
 
  # Questions for Sai Harshitha Karri
+ -Hypothesis 1 - 
  -
- -
- -
+ -Hypothesis 2 -
 
  # Questions for Patanjali Uppugandla
  -
