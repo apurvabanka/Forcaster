@@ -46,15 +46,20 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
   - Here we see the difference in continiuity of the graph when the dataset size increases.
 
  # Questions for Raj Kumar Alikatte
- -Hypothesis 1 - Motorcycles are able to do multiple deliveries compare to bicycle, electric_scooter and scooter.
- -
- -Hypothesis 2 - The Weather conditions impact the time taken to deliver
+ - Hypothesis 1 - Motorcycles are able to do multiple deliveries compare to bicycle, electric_scooter and scooter.
+   - code Analysis - 
+   - The file contains the logistic regression from the class
+   - The file contains the Multinomial logistic regression which is from outside of the class
+ - Hypothesis 2 - The Weather conditions impact the time taken to deliver
+   - code Analysis - 
 
+ 
  # Questions for Sai Harshitha Karri
- -Hypothesis 1 - 
- -
- -Hypothesis 2 -
-
+ - Hypothesis 1 - In the afternoon time the multiple deliveries are more compare to morning and evening times.
+   - code Analysis - 
+ - Hypothesis 2 -Customers in urban areas leave lower ratings compared to suburban areas.
+   - code Analysis - 
+ 
  # Questions for Patanjali Uppugandla
  -
  -
