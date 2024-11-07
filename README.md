@@ -47,11 +47,13 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 
  # Questions for Raj Kumar Alikatte
  - Hypothesis 1 - Motorcycles are able to do multiple deliveries compare to bicycle, electric_scooter and scooter.
-   - code Analysis - 
+   - code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Raj/Rajkumar_Alikatte_Phase2.ipynb
    - The file contains the logistic regression from the class
    - The file contains the Multinomial logistic regression which is from outside of the class
  - Hypothesis 2 - The Weather conditions impact the time taken to deliver
-   - code Analysis - 
+   - code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Raj/Rajkumar_Alikatte_Phase2.ipynb
+   - The file contains the Naive Bayes from the class
+   - The file contains the DBSCAN Clustering Algorithm from the outside of the class
 
  
  # Questions for Sai Harshitha Karri
