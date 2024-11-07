@@ -58,9 +58,13 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
  
  # Questions for Sai Harshitha Karri
  - Hypothesis 1 - In the afternoon time the multiple deliveries are more compare to morning and evening times.
-   - code Analysis - 
+   - code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Harshita/Harshitha_DIC_project_phase_2.ipynb
+   - In this file implemented ANOVA from outside of the class
+   - In this file implemented KNN from the class
  - Hypothesis 2 -Customers in urban areas leave lower ratings compared to suburban areas.
-   - code Analysis - 
+   - code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Harshita/Harshitha_DIC_project_phase_2.ipynb
+   - In this file implemented Random Forest which is inside from the class
+   - In this file implemented Gradient Boosting Regressor from the outside of the class
  
  # Questions for Patanjali Uppugandla
  - Hypothesis 1 - The delivery timings in the Evening would be higher compared to other parts of the day (like Morning, Afternoon, Night), especially when road 
