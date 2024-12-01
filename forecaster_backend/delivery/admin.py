@@ -1,3 +1,5 @@
 from django.contrib import admin
+from import_export.admin import ImportExportActionModelAdmin
+from delivery.models import DeliveryRecord
 
-# Register your models here.
+admin.site.register(DeliveryRecord, ImportExportActionModelAdmin)
