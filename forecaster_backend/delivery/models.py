@@ -25,3 +25,15 @@ class DeliveryRecord(models.Model):
 
     def __str__(self):
         return f"Delivery ID: {self.id} | City: {self.city}"
+    
+class RegressionResult(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    degree = models.IntegerField()  # Degree of the polynomial
+    coefficients = models.JSONField()  # List of coefficients
+    intercept = models.FloatField()
+    mean_squared_error = models.FloatField()
+    predictions = models.JSONField()  # List of predicted values
+    actuals = models.JSONField()  # List of actual target values
+
+    def __str__(self):
+        return f"Polynomial Regression (Degree {self.degree}) - {self.created_at}"
