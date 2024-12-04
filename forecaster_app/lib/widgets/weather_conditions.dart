@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-void main() {
-  runApp(MaterialApp(home: WeatherImpactDelivery()));
-}
+
 
 class WeatherImpactDelivery extends StatefulWidget {
   @override
@@ -32,9 +30,9 @@ class _WeatherImpactDeliveryState extends State<WeatherImpactDelivery> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
       //appBar: AppBar(title: Text("Weather Impact on Delivery Time")),
-      body: Padding(
+      child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
