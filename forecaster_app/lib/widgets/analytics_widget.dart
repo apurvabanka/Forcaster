@@ -3,6 +3,7 @@ import 'package:forecaster_app/widgets/average_rating_widget.dart';
 import 'package:forecaster_app/widgets/cluster_widget.dart';
 import 'package:forecaster_app/widgets/headerWidget.dart';
 import 'package:forecaster_app/widgets/vehicles_widget.dart';
+import 'package:forecaster_app/widgets/weather_conditions.dart';
 
 class AnalyticsWidget extends StatelessWidget {
   const AnalyticsWidget({super.key});
@@ -20,11 +21,14 @@ class AnalyticsWidget extends StatelessWidget {
           const SizedBox(height: 18,),
           const ClusterWidget(),
           const SizedBox(height: 18,),
-          VehicleEfficiencyApp(
-            
+          VehicleEfficiencyApp(),
+          const SizedBox(height: 18,),
+          WeatherImpactDelivery(
+
           )
         ],
       ),
+
     );
   }
 }
