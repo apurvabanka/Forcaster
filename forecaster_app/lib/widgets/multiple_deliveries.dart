@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-
-
 class TimeBasedDeliveries extends StatefulWidget {
+  const TimeBasedDeliveries({super.key});
+
   @override
   _TimeBasedDeliveriesState createState() => _TimeBasedDeliveriesState();
 }
@@ -28,7 +28,7 @@ class _TimeBasedDeliveriesState extends State<TimeBasedDeliveries> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Time Selector
-            Text("Select Time of Day", style: TextStyle(fontSize: 18)),
+            const Text("Select Time of Day", style: TextStyle(fontSize: 18)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -37,16 +37,14 @@ class _TimeBasedDeliveriesState extends State<TimeBasedDeliveries> {
                 _buildTimeButton("Evening"),
               ],
             ),
-
-            SizedBox(height: 20),
-
+            const SizedBox(height: 20),
             // Dynamic Text Display
             Text(
               "Deliveries: ${deliveryData[selectedTime]}",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Dynamic Bar Chart
             Expanded(
@@ -78,9 +76,6 @@ class _TimeBasedDeliveriesState extends State<TimeBasedDeliveries> {
         });
       },
       child: Text(time),
-      style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white, backgroundColor: selectedTime == time ? Colors.blue : Colors.grey, minimumSize:Size(100,60)
-      ),
     );
   }
 }

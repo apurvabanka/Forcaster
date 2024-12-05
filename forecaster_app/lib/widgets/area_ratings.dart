@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-
-
 class AreaRatingsComparison extends StatefulWidget {
+  const AreaRatingsComparison({super.key});
+
   @override
   _AreaRatingsComparisonState createState() => _AreaRatingsComparisonState();
 }
@@ -19,7 +19,8 @@ class _AreaRatingsComparisonState extends State<AreaRatingsComparison> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+      height: 600,
       //appBar: AppBar(
         //title: Text("Urban vs. Suburban Ratings"),
       //),
@@ -53,7 +54,7 @@ class _AreaRatingsComparisonState extends State<AreaRatingsComparison> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Side-by-Side Bar Chart
             Expanded(
