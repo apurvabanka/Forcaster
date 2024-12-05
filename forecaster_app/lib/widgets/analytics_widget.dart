@@ -13,9 +13,9 @@ class AnalyticsWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 18),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Container(
-          height: MediaQuery.of(context).size.height * 1.75,
+          height: MediaQuery.of(context).size.height * 2.0,
           child: Column(
             children: [
               const SizedBox(height: 18,),

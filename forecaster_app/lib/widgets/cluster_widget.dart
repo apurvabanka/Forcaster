@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:forecaster_app/const/constant.dart';
+import 'package:forecaster_app/controller/clustering_controller.dart';
+import 'package:forecaster_app/models/point.dart';
+import 'package:get/instance_manager.dart';
 
 class ClusterWidget extends StatefulWidget {
   const ClusterWidget({super.key});
@@ -9,87 +11,61 @@ class ClusterWidget extends StatefulWidget {
 }
 
 class _ClusterWidgetState extends State<ClusterWidget> {
+  final ClusteringController controller = Get.put(ClusteringController());
+
+  @override
+  void initState() {
+    super.initState();
+    controller.fetchData();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: cardBackgroundColor,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(18.0),
-        child: Center(
-          child: Container(
-            width: 300,
-            height: 200,
-            decoration: BoxDecoration(
-              color: Colors.black,
-              border: Border.all(color: Colors.white, width: 2),
-            ),
-            child: Stack(
-              children: [
-                // Title: "Clusters"
-                const Positioned(
-                  top: 8,
-                  left: 8,
-                  child: Text(
-                    'Clusters',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                // Blue dots for clusters
-                Positioned(
-                  left: 50,
-                  top: 50,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: List.generate(5, (index) {
-                      return Row(
-                        children: List.generate(3, (i) {
-                          return const Padding(
-                            padding: EdgeInsets.all(4.0),
-                            child: CircleAvatar(
-                              radius: 5,
-                              backgroundColor: Colors.blue,
-                            ),
-                          );
-                        }),
-                      );
-                    }),
-                  ),
-                ),
-                // Star-shaped clusters
-                Positioned(
-                  right: 40,
-                  bottom: 30,
-                  child: Column(
-                    children: List.generate(
-                      3,
-                      (index) {
-                        return Row(
-                          children: List.generate(3, (i) {
-                            return const Padding(
-                              padding: EdgeInsets.all(4.0),
-                              child: Icon(
-                                Icons.star,
-                                color: Colors.white,
-                                size: 16,
-                              ),
-                            );
-                          }),
-                        );
-                      },
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+    return Column(
+      children: [
+        const Text(
+          'Custers',
+          style: TextStyle(color: Colors.white, fontSize: 22),
         ),
-      ),
+        CustomPaint(
+          size: const Size(450, 300),
+          painter: ScatterPlotPainter(controller.points),
+        ),
+      ],
     );
+  }
+}
+
+class ScatterPlotPainter extends CustomPainter {
+  final List<Point> points;
+
+  ScatterPlotPainter(this.points);
+
+  Map<int, Color> cluster_color = {
+    0: Colors.blue,
+    1: Colors.orange,
+    2: Colors.red,
+    3: Colors.green,
+  };
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    for (final point in points) {
+      final Paint pointPaint = Paint()
+        ..color = cluster_color[point.cluster]!
+        ..style = PaintingStyle.fill;
+
+      final normalizedX =
+          ((point.delivery_location_longitude + 180) / 360) * size.width * 2 - 400;
+      final normalizedY =
+          ((90 - point.delivery_location_latitude) / 180) * size.height * 2 - 150;
+
+      canvas.drawCircle(Offset(normalizedX, normalizedY), 5, pointPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
   }
 }
