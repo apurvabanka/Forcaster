@@ -23,9 +23,7 @@ class AnalyticsWidget extends StatelessWidget {
           const SizedBox(height: 18,),
           VehicleEfficiencyApp(),
           const SizedBox(height: 18,),
-          WeatherImpactDelivery(
-            
-          )
+          //WeatherImpactDelivery()
         ],
       ),
 
