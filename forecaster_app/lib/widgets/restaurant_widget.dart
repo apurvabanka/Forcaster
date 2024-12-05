@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:forecaster_app/widgets/restaurant_activity_details.dart';
 import 'package:forecaster_app/widgets/bar_graph_card.dart';
 import 'package:forecaster_app/widgets/headerWidget.dart';
-import 'package:forecaster_app/widgets/line_chart_card.dart';
+import 'package:forecaster_app/widgets/Restaurant_Line_Data.dart';
 
 class RestaurantWidget extends StatelessWidget {
   const RestaurantWidget({super.key});
@@ -24,10 +24,10 @@ class RestaurantWidget extends StatelessWidget {
           SizedBox(
             height: 18,
           ),
-          LineChartCard(),
-          SizedBox(
-            height: 18,
-          ),
+          // LineChartCard(),
+          // SizedBox(
+          //   height: 18,
+          // ),
           BarGraphCard(),
           SizedBox(
             height: 100,

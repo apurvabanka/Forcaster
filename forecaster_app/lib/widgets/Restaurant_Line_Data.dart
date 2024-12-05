@@ -4,8 +4,8 @@ import 'package:forecaster_app/const/constant.dart';
 import 'package:forecaster_app/data/restaurant_line.dart';
 import 'package:forecaster_app/widgets/custom_card_widget.dart';
 
-class LChartCard extends StatelessWidget {
-  const LChartCard({super.key});
+class LineChartCard extends StatelessWidget {
+  const LineChartCard({super.key});
 
   @override
   Widget build(BuildContext context) {

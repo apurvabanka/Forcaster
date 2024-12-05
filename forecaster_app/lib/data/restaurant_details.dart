@@ -3,20 +3,20 @@ import 'package:forecaster_app/models/restaunrant_details_model.dart';
 class RestaurantDetails {
   final restaurantData = const [
     RestaurantDetailsModel(
-        icon: 'assets/icons/burn.png',
-        value: "12345",
+        icon: 'assets/icons/p1.png',
+        value: "7.88 km",
         title: "Average Delivery Distance"),
     RestaurantDetailsModel(
-        icon: 'assets/icons/distance.png',
-        value: "1234",
-        title: "Delivery Time"),
+        icon: 'assets/icons/p2.png',
+        value: "Snacks",
+        title: "More ordered item"),
     RestaurantDetailsModel(
-        icon: 'assets/icons/steps.png',
-        value: "1234",
+        icon: 'assets/icons/p3.png',
+        value: "28.33",
         title: "Average Delivery Time"),
     RestaurantDetailsModel(
-        icon: 'assets/icons/order.png',
-        value: "12345",
-        title: "Average Preparation Time"),
+        icon: 'assets/icons/p4.png',
+        value: "18 min",
+        title: "Order Preparation time"),
   ];
 }
