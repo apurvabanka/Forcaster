@@ -25,7 +25,7 @@ class DeliveryRecord(models.Model):
 
     def __str__(self):
         return f"Delivery ID: {self.id} | City: {self.city}"
-    
+
 class RegressionResult(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     degree = models.IntegerField()  # Degree of the polynomial
@@ -37,3 +37,13 @@ class RegressionResult(models.Model):
 
     def __str__(self):
         return f"Polynomial Regression (Degree {self.degree}) - {self.created_at}"
+
+class ClusteringResult(models.Model):
+    point_id = models.IntegerField()  # ID or index of the data point
+    cluster = models.IntegerField()  # Cluster ID
+    delivery_location_latitude = models.FloatField()  # Feature 1
+    delivery_location_longitude = models.FloatField()  # Feature 2
+    distance_from_centroid = models.FloatField(null=True, blank=True)  # Optional
+
+    def __str__(self):
+        return f"Point {self.point_id} in Cluster {self.cluster}"
