@@ -39,7 +39,8 @@ dependencies:
   flutter_svg: ^2.0.5
   syncfusion_flutter_gauges: ^20.2.36
   syncfusion_flutter_charts: ^20.2.36
-  
+  get: ^4.6.5
+  http: ^1.2.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

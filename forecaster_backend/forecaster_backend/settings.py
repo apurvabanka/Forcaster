@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'delivery',
     'restaurant',
     'import_export',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'forecaster_backend.urls'
@@ -127,3 +129,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 IMPORT_FORMATS = [CSV]
+
+CORS_ALLOW_ALL_ORIGINS = True
