@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:forecaster_app/widgets/area_ratings.dart';
 import 'package:forecaster_app/widgets/average_rating_widget.dart';
 import 'package:forecaster_app/widgets/cluster_widget.dart';
+import 'package:forecaster_app/widgets/multiple_deliveries.dart';
 import 'package:forecaster_app/widgets/vehicles_widget.dart';
 import 'package:forecaster_app/widgets/weather_conditions.dart';
 
@@ -27,6 +29,12 @@ class AnalyticsWidget extends StatelessWidget {
               const SizedBox(height: 18,),
               WeatherImpactDelivery(),
               const SizedBox(height: 18,),
+              TimeBasedDeliveries(),
+              const SizedBox(height: 18,),
+              AreaRatingsComparison(),
+              const SizedBox(height: 18,),
+
+
             ],
           ),
         ),
