@@ -24,12 +24,40 @@ class _ClusterWidgetState extends State<ClusterWidget> {
     return Column(
       children: [
         const Text(
-          'Custers',
-          style: TextStyle(color: Colors.white, fontSize: 22),
+          'Clusters',
+          style: TextStyle(color: Colors.white, fontSize: 30),
         ),
-        CustomPaint(
-          size: const Size(450, 300),
-          painter: ScatterPlotPainter(controller.points),
+        Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                // color: Colors.white, // Background color
+                border: Border.all(
+                  color: Colors.blue, // Outline color
+                  width: 2.0, // Outline width
+                ),
+              ),
+              child: CustomPaint(
+                size: const Size(450, 300),
+                painter: ScatterPlotPainter(controller.points),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                '         Your Cluster: ',
+                style: TextStyle(color: Colors.white, fontSize: 22),
+              ),
+            ),
+            Container(
+              width: 25, // Width of the circle
+              height: 25, // Height of the circle
+              decoration: const BoxDecoration(
+                color: Colors.orange, // Set the color to orange
+                shape: BoxShape.circle, // Shape of the container is a circle
+              ),
+            ),
+          ],
         ),
       ],
     );
@@ -56,9 +84,11 @@ class ScatterPlotPainter extends CustomPainter {
         ..style = PaintingStyle.fill;
 
       final normalizedX =
-          ((point.delivery_location_longitude + 180) / 360) * size.width * 2 - 400;
+          ((point.delivery_location_longitude + 180) / 360) * size.width * 2 -
+              400;
       final normalizedY =
-          ((90 - point.delivery_location_latitude) / 180) * size.height * 2 - 150;
+          ((90 - point.delivery_location_latitude) / 180) * size.height * 2 -
+              150;
 
       canvas.drawCircle(Offset(normalizedX, normalizedY), 5, pointPaint);
     }
