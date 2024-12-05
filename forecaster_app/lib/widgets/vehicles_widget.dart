@@ -10,10 +10,10 @@ class VehicleEfficiencyApp extends StatefulWidget {
 class _VehicleEfficiencyAppState extends State<VehicleEfficiencyApp> {
   // Vehicle data: Average deliveries and efficiency score
   final Map<String, Map<String, double>> vehicleData = {
-    "Motorcycle": {"averageDeliveries": 5, "efficiencyScore": 85},
-    "Bicycle": {"averageDeliveries": 2, "efficiencyScore": 60},
-    "Scooter": {"averageDeliveries": 3, "efficiencyScore": 75},
-    "Electric Scooter": {"averageDeliveries": 1, "efficiencyScore": 50},
+    "Motorcycle": {"averageDeliveries": 30, "efficiencyScore": 85},
+    "Bicycle": {"averageDeliveries": 8, "efficiencyScore": 60},
+    "Scooter": {"averageDeliveries": 18, "efficiencyScore": 75},
+    "Electric Scooter": {"averageDeliveries": 12, "efficiencyScore": 50},
   };
 
   String selectedVehicle = "Motorcycle";

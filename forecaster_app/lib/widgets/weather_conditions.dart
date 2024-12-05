@@ -20,6 +20,7 @@ class _WeatherImpactDeliveryState extends State<WeatherImpactDelivery> {
   final List<ScatterPlotData> scatterData = [
     ScatterPlotData("Clear", 15),
     ScatterPlotData("Clear", 20),
+    ScatterPlotData("Clear", 22),
     ScatterPlotData("Rainy", 25),
     ScatterPlotData("Rainy", 35),
     ScatterPlotData("Snowy", 40),
