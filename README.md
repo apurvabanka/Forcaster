@@ -87,7 +87,7 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
  - The file implements Logistic regression, LSTM
  - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Patanjali/Patanjai_Uppugandla_50587096_phase2.ipynb
 
-# How to run the code
+# Instruction to build the app from the source code
 
 ## Configure the Back-End
 - Clone the repoitory.
