@@ -17,7 +17,6 @@ class AverageRatingController extends GetxController {
   }
 
   double predictPolynomial(double x, List<dynamic> coefficients, double intercept) {
-  // Calculate the predicted value for a polynomial regression
   double result = intercept +
       coefficients[1] * pow(x, 1) +
       coefficients[2] * pow(x, 2) +
