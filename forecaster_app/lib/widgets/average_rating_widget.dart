@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:forecaster_app/const/constant.dart';
+import 'package:forecaster_app/controller/average_rating_controller.dart';
+import 'package:get/instance_manager.dart';
 
 class AverageRatingWidget extends StatefulWidget {
   const AverageRatingWidget({super.key});
@@ -9,7 +11,13 @@ class AverageRatingWidget extends StatefulWidget {
 }
 
 class _AverageRatingWidgetState extends State<AverageRatingWidget> {
-  double _rating = 4.3;
+  final AverageRatingController controller = Get.put(AverageRatingController());
+  double _rating = 3.0;
+  double _sliderValue = 10;
+
+  void run() {
+    controller.fetchData(_rating);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,19 +32,26 @@ class _AverageRatingWidgetState extends State<AverageRatingWidget> {
             children: [
               const SizedBox(height: 20),
               const Text(
-                'Time Taken',
-                style: TextStyle(color: Colors.white, fontSize: 16),
+                'Time Taken (min)',
+                style: TextStyle(color: Colors.white, fontSize: 22),
+              ),
+              Text(
+                _sliderValue.toString(),
+                style: const TextStyle(color: Colors.white, fontSize: 32),
               ),
               Slider(
-                value: _rating,
-                min: 1.0,
-                max: 5.0,
+                value: _sliderValue,
+                min: 10.0,
+                max: 55.0,
                 divisions: 40,
                 activeColor: Colors.blue,
                 inactiveColor: Colors.grey,
                 onChanged: (value) {
                   setState(() {
-                    _rating = double.parse(value.toStringAsFixed(1));
+                    _sliderValue = value;
+                    controller.fetchData(value);
+                    _rating =
+                        double.parse(controller.y_pred.toStringAsFixed(1));
                   });
                 },
               ),
