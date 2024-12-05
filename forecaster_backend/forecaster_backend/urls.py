@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path
 
@@ -25,4 +26,5 @@ urlpatterns = [
     path('list-regression-results/', list_regression_results, name='list_regression_results'),
     path('run-clustering', run_and_save_clustering, name='run_and_save_clustering'),
     path('list-clustering-results/', list_clustering_results, name='list_regression_results'),
+    path('restaurant/', include('restaurant.urls')),  # Include restaurant app URLs
 ]
