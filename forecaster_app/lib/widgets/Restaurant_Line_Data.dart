@@ -1,22 +1,22 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:forecaster_app/const/constant.dart';
-import 'package:forecaster_app/data/line_chart_data.dart';
+import 'package:forecaster_app/data/restaurant_line.dart';
 import 'package:forecaster_app/widgets/custom_card_widget.dart';
 
-class LineChartCard extends StatelessWidget {
-  const LineChartCard({super.key});
+class LChartCard extends StatelessWidget {
+  const LChartCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final data = LineData();
+    final data = RestaurantLineData();
 
     return CustomCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Deliveries Per Day",
+            "Average Delivery Time by Hour",
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           ),
           const SizedBox(height: 20),
@@ -27,7 +27,7 @@ class LineChartCard extends StatelessWidget {
                 lineTouchData: const LineTouchData(
                   handleBuiltInTouches: true,
                 ),
-                gridData: const FlGridData(show: false),
+                gridData: const FlGridData(show: true),
                 titlesData: FlTitlesData(
                   rightTitles: const AxisTitles(
                     sideTitles: SideTitles(showTitles: false),
@@ -43,9 +43,12 @@ class LineChartCard extends StatelessWidget {
                             ? SideTitleWidget(
                                 axisSide: meta.axisSide,
                                 child: Text(
-                                    data.bottomTitle[value.toInt()].toString(),
-                                    style: TextStyle(
-                                        fontSize: 12, color: Colors.grey[400])),
+                                  data.bottomTitle[value.toInt()].toString(),
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.grey,
+                                  ),
+                                ),
                               )
                             : const SizedBox();
                       },
@@ -55,20 +58,26 @@ class LineChartCard extends StatelessWidget {
                     sideTitles: SideTitles(
                       getTitlesWidget: (double value, TitleMeta meta) {
                         return data.leftTitle[value.toInt()] != null
-                            ? Text(data.leftTitle[value.toInt()].toString(),
-                                style: TextStyle(
-                                    fontSize: 12, color: Colors.grey[400]))
+                            ? Text(
+                                data.leftTitle[value.toInt()].toString(),
+                                style: const TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              )
                             : const SizedBox();
                       },
                       showTitles: true,
-                      interval: 1,
+                      interval: 10,
                       reservedSize: 40,
                     ),
                   ),
                 ),
-                borderData: FlBorderData(show: false),
+                borderData: FlBorderData(show: true),
                 lineBarsData: [
                   LineChartBarData(
+                    isCurved: true,
+                    spots: data.spots,
                     color: selectionColor,
                     barWidth: 2.5,
                     belowBarData: BarAreaData(
@@ -77,19 +86,18 @@ class LineChartCard extends StatelessWidget {
                         end: Alignment.bottomCenter,
                         colors: [
                           selectionColor.withOpacity(0.5),
-                          Colors.transparent
+                          Colors.transparent,
                         ],
                       ),
                       show: true,
                     ),
                     dotData: const FlDotData(show: false),
-                    spots: data.spots,
-                  )
+                  ),
                 ],
                 minX: 0,
-                maxX: 120,
-                maxY: 105,
-                minY: -5,
+                maxX: 23,
+                minY: 0,
+                maxY: 40,
               ),
             ),
           ),

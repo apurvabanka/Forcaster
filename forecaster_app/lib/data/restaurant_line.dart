@@ -1,0 +1,65 @@
+import 'package:fl_chart/fl_chart.dart';
+
+class RestaurantLineData {
+  final spots = const [
+    FlSpot(0, 22.0),
+    FlSpot(1, 20.0),
+    FlSpot(2, 19.0),
+    FlSpot(3, 19.0),
+    FlSpot(4, 20.0),
+    FlSpot(5, 21.0),
+    FlSpot(6, 22.0),
+    FlSpot(7, 23.0),
+    FlSpot(8, 26.0),
+    FlSpot(9, 28.0),
+    FlSpot(10, 30.0),
+    FlSpot(11, 32.0),
+    FlSpot(12, 31.0),
+    FlSpot(13, 30.0),
+    FlSpot(14, 25.0),
+    FlSpot(15, 23.0),
+    FlSpot(16, 21.0),
+    FlSpot(17, 22.0),
+    FlSpot(18, 25.0),
+    FlSpot(19, 30.0),
+    FlSpot(20, 28.0),
+    FlSpot(21, 24.0),
+    FlSpot(22, 22.0),
+    FlSpot(23, 21.0),
+  ];
+
+  final bottomTitle = const {
+    0: '0',
+    1: '1',
+    2: '2',
+    3: '3',
+    4: '4',
+    5: '5',
+    6: '6',
+    7: '7',
+    8: '8',
+    9: '9',
+    10: '10',
+    11: '11',
+    12: '12',
+    13: '13',
+    14: '14',
+    15: '15',
+    16: '16',
+    17: '17',
+    18: '18',
+    19: '19',
+    20: '20',
+    21: '21',
+    22: '22',
+    23: '23',
+  };
+
+  final leftTitle = const {
+    0: '0',
+    10: '10',
+    20: '20',
+    30: '30',
+    40: '40',
+  };
+}

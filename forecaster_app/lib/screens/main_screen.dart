@@ -3,6 +3,7 @@ import 'package:forecaster_app/const/constant.dart';
 import 'package:forecaster_app/widgets/analytics_widget.dart';
 import 'package:forecaster_app/widgets/dashboard_widget.dart';
 import 'package:forecaster_app/widgets/side_menu_widget.dart';
+import 'package:forecaster_app/widgets/restaurant_widget.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -17,11 +18,10 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _widget = [
     const DashboardWidget(),
     const AnalyticsWidget(),
-    const DashboardWidget(), // TODO: Add different widget and replace in this list
+    const RestaurantWidget(), // TODO: Add different widget and replace in this list
     const DashboardWidget(),
     const DashboardWidget(),
     const DashboardWidget(),
-
   ];
 
   void _onItemTapped(int index) {
