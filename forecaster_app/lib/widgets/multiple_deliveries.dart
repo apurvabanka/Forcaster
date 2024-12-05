@@ -79,8 +79,7 @@ class _TimeBasedDeliveriesState extends State<TimeBasedDeliveries> {
       },
       child: Text(time),
       style: ElevatedButton.styleFrom(
-        primary: selectedTime == time ? Colors.blue : Colors.grey,
-        onPrimary: Colors.white,
+        foregroundColor: Colors.white, backgroundColor: selectedTime == time ? Colors.blue : Colors.grey, minimumSize:Size(100,60)
       ),
     );
   }

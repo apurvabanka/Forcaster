@@ -19,11 +19,11 @@ class _AreaRatingsComparisonState extends State<AreaRatingsComparison> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Urban vs. Suburban Ratings"),
-      ),
-      body: Padding(
+    return Container(
+      //appBar: AppBar(
+        //title: Text("Urban vs. Suburban Ratings"),
+      //),
+      child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
