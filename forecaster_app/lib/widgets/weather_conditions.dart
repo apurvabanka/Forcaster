@@ -30,8 +30,8 @@ class _WeatherImpactDeliveryState extends State<WeatherImpactDelivery> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //appBar: AppBar(title: Text("Weather Impact on Delivery Time")),
+    return SizedBox(
+      height: 600,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
