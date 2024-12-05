@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from delivery.views import list_clustering_results, list_regression_results, run_and_save_clustering, run_and_save_regression
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('run-regression', run_and_save_regression, name='run_and_save_regression'),
+    path('list-regression-results/', list_regression_results, name='list_regression_results'),
+    path('run-clustering', run_and_save_clustering, name='run_and_save_clustering'),
+    path('list-clustering-results/', list_clustering_results, name='list_regression_results'),
 ]
