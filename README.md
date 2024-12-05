@@ -86,3 +86,18 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
    place and the weather.
  - The file implements Logistic regression, LSTM
  - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Patanjali/Patanjai_Uppugandla_50587096_phase2.ipynb
+
+# How to run the code
+
+## Configure the Back-End
+- Clone the repoitory.
+- Navigate to `forecaster-backend` folder.
+- Make sure you have Python installed on your machine.
+- Run the command `python manage.py migrate`. This will create the necessary migraitons to the database. (Since, we are using Sqlite3, database configuration is not required)
+- Run the command `python manage.py runserver`. This should run your server on http://127.0.0.1:8000/
+
+## Configure the Front-End
+- Clone the repository.
+- Navigate to `forecaster-app` folder.
+- Make sure `flutter` is installed on your machine.
+- Run the command - `flutter run -d chrome`. This should launch the Dashborad UI.
