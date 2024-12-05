@@ -19,10 +19,21 @@ class _WeatherImpactDeliveryState extends State<WeatherImpactDelivery> {
   // Scatter plot data: Random delivery times for each condition
   final List<ScatterPlotData> scatterData = [
     ScatterPlotData("Clear", 15),
+    ScatterPlotData("Clear", 10),
     ScatterPlotData("Clear", 20),
     ScatterPlotData("Clear", 22),
+    ScatterPlotData("Clear", 8),
+    ScatterPlotData("Clear", 12),
     ScatterPlotData("Rainy", 25),
+    ScatterPlotData("Rainy", 27),
+    ScatterPlotData("Rainy", 31),
     ScatterPlotData("Rainy", 35),
+    ScatterPlotData("Rainy", 29),
+    ScatterPlotData("Rainy", 38),
+    ScatterPlotData("Snowy", 39),
+    ScatterPlotData("Snowy", 42),
+    ScatterPlotData("Snowy", 45),
+    ScatterPlotData("Snowy", 52),
     ScatterPlotData("Snowy", 40),
     ScatterPlotData("Snowy", 55),
   ];
