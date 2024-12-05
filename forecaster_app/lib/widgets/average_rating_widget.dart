@@ -24,7 +24,7 @@ class _AverageRatingWidgetState extends State<AverageRatingWidget> {
             children: [
               const SizedBox(height: 20),
               const Text(
-                'Distance',
+                'Time Taken',
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               Slider(
