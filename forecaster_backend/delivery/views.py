@@ -1,9 +1,10 @@
 import pandas as pd
 
 from django.http import JsonResponse
-from .models import RegressionResult, DeliveryRecord
+from .models import ClusteringResult, RegressionResult, DeliveryRecord
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
+from sklearn.cluster import KMeans
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
@@ -49,8 +50,37 @@ def run_and_save_regression(request):
     return JsonResponse(response)
 
 
+def run_and_save_clustering(request):
+    data = DeliveryRecord.objects.all().values('delivery_location_latitude', 'delivery_location_longitude')
+    df = pd.DataFrame(list(data))
+
+    k = 4  # Optimal k from the elbow method
+    kmeans = KMeans(n_clusters=k)
+    df['cluster'] = kmeans.fit_predict(df)
+
+    df['distance_from_centroid'] = kmeans.transform(df[['delivery_location_latitude', 'delivery_location_longitude']]).min(axis=1)
+
+    results = [
+        ClusteringResult(
+            point_id=index,
+            cluster=row['cluster'],
+            delivery_location_latitude=row['delivery_location_latitude'],
+            delivery_location_longitude=row['delivery_location_longitude'],
+            distance_from_centroid=row['distance_from_centroid'],
+        )
+        for index, row in df.iterrows()
+    ]
+
+    ClusteringResult.objects.bulk_create(results)
+
+    return JsonResponse({'msg': 'Clustering executed sucessfully'})
+
 
 def list_regression_results(request):
-    results = RegressionResult.objects.all().values('id', 'created_at', 'mean_squared_error')
+    results = RegressionResult.objects.all().values('id', 'created_at', 'degree', 'coefficients', 'intercept', 'mean_squared_error')
+    return JsonResponse({'results': list(results)})
+
+def list_clustering_results(request):
+    results = ClusteringResult.objects.all().values('point_id', 'cluster', 'delivery_location_latitude', 'delivery_location_longitude', 'distance_from_centroid')
     return JsonResponse({'results': list(results)})
 
