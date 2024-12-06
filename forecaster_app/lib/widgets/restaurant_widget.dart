@@ -31,7 +31,7 @@ class RestaurantWidget extends StatelessWidget {
             height: 200, // Graph height
             child: LineChart(
               LineChartData(
-                gridData: FlGridData(show: true),
+                gridData: const FlGridData(show: true),
                 titlesData: FlTitlesData(
                   leftTitles: AxisTitles(
                     sideTitles: SideTitles(
@@ -58,16 +58,16 @@ class RestaurantWidget extends StatelessWidget {
                     ),
                   ),
                   topTitles:
-                      AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                      const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                   rightTitles:
-                      AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                      const AxisTitles(sideTitles: SideTitles(showTitles: false)),
                 ),
                 borderData: FlBorderData(show: true),
                 lineBarsData: [
                   LineChartBarData(
                     spots: _getHourlyDeliverySpots(),
                     isCurved: true,
-                    dotData: FlDotData(show: true),
+                    dotData: const FlDotData(show: true),
                     belowBarData: BarAreaData(show: false),
                   ),
                 ],

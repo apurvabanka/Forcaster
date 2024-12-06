@@ -14,7 +14,7 @@ class AnalyticsWidget extends StatelessWidget {
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         physics: const BouncingScrollPhysics(),
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.of(context).size.height * 2.0,
           child: Column(
             children: [
