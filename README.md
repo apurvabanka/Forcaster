@@ -23,7 +23,8 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 
 ## Folder Structure
 
-- All the reports are present in the `Report` folder. Every file is following the naming convension <First_name>_<Last_name>_<Phase_number>.pdf
+- `reports`
+    - All the reports are present in the `Report` folder. Every file is following the naming convension <First_name>_<Last_name>_<Phase_number>.pdf
 - `forecaster-analytics`
     - This folder contains all the data cleaning, EDA, hypothesis and Modeling code in the IPYNB file.    
     - There are folders named for each individual. The folders follow the naming convension <First_name>.
@@ -86,3 +87,23 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
    place and the weather.
  - The file implements Logistic regression, LSTM
  - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Patanjali/Patanjai_Uppugandla_50587096_phase2.ipynb
+
+# Instruction to build the app from the source code
+
+## Configure the Back-End
+- Clone the repoitory.
+- Run `cd forecastor_backend`. This will navigate to `forecaster-backend` folder.
+- Make sure you have Python installed on your machine.
+- Run `python3 -m venv env`. This will create the virtual environment.
+- Run `source /env/bin/activate`. This will activate the environment.
+- Run `pip install -r requirement.txt`. This will install all the dependencies.
+- Run `export DJANGO_SUPERUSER_PASSWORD='yourpassword'`. This will set a password in the environment.
+- To create a superuser, run `python manage.py createsuperuser --username admin --email admin@example.com --noinput`. This should create a superuser.
+- Run the command `python manage.py migrate`. This will create the necessary migraitons to the database. (Since, we are using Sqlite3, database configuration is not required)
+- Run the command `python manage.py runserver`. This should run your server on http://127.0.0.1:8000/
+
+## Configure the Front-End
+- Clone the repository.
+- Run `cd forecastor-app`. This will navigate to `forecaster-app` folder.
+- Make sure `flutter` is installed on your machine.
+- Run the command - `flutter run -d chrome`. This should launch the Dashborad UI.

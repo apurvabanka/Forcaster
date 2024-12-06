@@ -9,6 +9,39 @@ class DashboardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 18),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        physics: const BouncingScrollPhysics(),
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height * 1.1,
+          child: const Column(
+            children: [
+              SizedBox(
+                height: 18,
+              ),
+              Headerwidget(),
+              SizedBox(
+                height: 18,
+              ),
+              ActivityDetailsCard(),
+              SizedBox(
+                height: 18,
+              ),
+              LineChartCard(),
+              SizedBox(
+                height: 18,
+              ),
+              BarGraphCard(),
+              SizedBox(
+                height: 100,
+              ),
+            ],
+          ),
+        ),
+=======
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 18),
       child: Column(
@@ -33,6 +66,7 @@ class DashboardWidget extends StatelessWidget {
             height: 100,
           ),
         ],
+>>>>>>> Stashed changes
       ),
     );
   }
