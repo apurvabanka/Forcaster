@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:forecaster_app/widgets/restaurant_activity_details.dart';
 import 'package:forecaster_app/widgets/bar_graph_card2.dart';
 import 'package:forecaster_app/widgets/headerWidget.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 class RestaurantWidget extends StatelessWidget {
   const RestaurantWidget({super.key});
@@ -13,15 +14,67 @@ class RestaurantWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 18),
-          Headerwidget(),
-          SizedBox(height: 18),
-          RestaurantDetailsCard(),
-          SizedBox(height: 18),
-          BarGraphCard(),
-          SizedBox(height: 18),
-          // Removed Dropdowns and Prediction Logic
-          SizedBox(height: 100),
+          const SizedBox(height: 12),
+          const Headerwidget(),
+          const SizedBox(height: 12),
+          const RestaurantDetailsCard(),
+          const SizedBox(height: 12),
+          const BarGraphCard(),
+          const SizedBox(height: 12),
+          // Add the graph in the middle widget
+          Text(
+            'Average Delivery Time by Hour of the Day',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          const SizedBox(height: 12),
+          SizedBox(
+            height: 200, // Graph height
+            child: LineChart(
+              LineChartData(
+                gridData: FlGridData(show: true),
+                titlesData: FlTitlesData(
+                  leftTitles: AxisTitles(
+                    sideTitles: SideTitles(
+                      showTitles: true,
+                      reservedSize: 30, // Reserved space for Y-axis
+                      getTitlesWidget: (value, meta) {
+                        return Text(
+                          value.toInt().toString(),
+                          style: const TextStyle(fontSize: 8),
+                        );
+                      },
+                    ),
+                  ),
+                  bottomTitles: AxisTitles(
+                    sideTitles: SideTitles(
+                      showTitles: true,
+                      reservedSize: 20, // Reserved space for X-axis
+                      getTitlesWidget: (value, meta) {
+                        return Text(
+                          value.toInt().toString(),
+                          style: const TextStyle(fontSize: 8),
+                        );
+                      },
+                    ),
+                  ),
+                  topTitles:
+                      AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                  rightTitles:
+                      AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                ),
+                borderData: FlBorderData(show: true),
+                lineBarsData: [
+                  LineChartBarData(
+                    spots: _getHourlyDeliverySpots(),
+                    isCurved: true,
+                    dotData: FlDotData(show: true),
+                    belowBarData: BarAreaData(show: false),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 50), // Space below the graph
         ],
       ),
     );
