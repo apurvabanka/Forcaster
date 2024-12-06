@@ -26,5 +26,4 @@ urlpatterns = [
     path('list-regression-results/', list_regression_results, name='list_regression_results'),
     path('run-clustering', run_and_save_clustering, name='run_and_save_clustering'),
     path('list-clustering-results/', list_clustering_results, name='list_regression_results'),
-    path('restaurant/', include('restaurant.urls')),  # Include restaurant app URLs
 ]
