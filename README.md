@@ -91,9 +91,13 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 # Instruction to build the app from the source code
 
 - Make sure you have Docker installed on your machine.
+- Clone the repository.
+```CMD
+git clone https://github.com/apurvabanka/Forcaster.git
+```
 - Run the below command.
 ```CMD
-  docker compose up --build
+docker compose up --build
 ```
 - This should run the backend and the frontend.
 - Go to the following URL. http://127.0.0.1:3000/
