@@ -7,8 +7,5 @@ class SideMenuData {
     MenuModel(icon: Icons.analytics, title: 'Analytics'),
     MenuModel(icon: Icons.analytics, title: 'Restaurant'),
     MenuModel(icon: Icons.person, title: 'Predictor'),
-    MenuModel(icon: Icons.settings, title: 'Settings'),
-    MenuModel(icon: Icons.history, title: 'History'),
-    MenuModel(icon: Icons.logout, title: 'SignOut'),
   ];
 }
