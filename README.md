@@ -92,13 +92,16 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 
 ## Configure the Back-End
 - Clone the repoitory.
-- Navigate to `forecaster-backend` folder.
+- Run `cd forecastor_backend`. This will navigate to `forecaster-backend` folder.
 - Make sure you have Python installed on your machine.
+- Run `python3 -m venv env`. This will create the virtual environment.
+- Run `source /env/bin/activate`. This will activate the environment.
+- Run `pip install -r requirement.txt`. This will install all the dependencies.
 - Run the command `python manage.py migrate`. This will create the necessary migraitons to the database. (Since, we are using Sqlite3, database configuration is not required)
 - Run the command `python manage.py runserver`. This should run your server on http://127.0.0.1:8000/
 
 ## Configure the Front-End
 - Clone the repository.
-- Navigate to `forecaster-app` folder.
+- Run `cd forecastor-app`. This will navigate to `forecaster-app` folder.
 - Make sure `flutter` is installed on your machine.
 - Run the command - `flutter run -d chrome`. This should launch the Dashborad UI.
