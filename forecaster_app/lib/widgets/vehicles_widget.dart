@@ -3,6 +3,8 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 
 class VehicleEfficiencyApp extends StatefulWidget {
+  const VehicleEfficiencyApp({super.key});
+
   @override
   _VehicleEfficiencyAppState createState() => _VehicleEfficiencyAppState();
 }
@@ -28,7 +30,7 @@ class _VehicleEfficiencyAppState extends State<VehicleEfficiencyApp> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Dropdown Selector
-            Text("Select Vehicle Type", style: TextStyle(fontSize: 18)),
+            const Text("Select Vehicle Type", style: TextStyle(fontSize: 18)),
             DropdownButton<String>(
               value: selectedVehicle,
               onChanged: (String? newValue) {
@@ -44,18 +46,18 @@ class _VehicleEfficiencyAppState extends State<VehicleEfficiencyApp> {
               }).toList(),
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Average Deliveries Display
             Text(
               "Average Deliveries: ${vehicleData[selectedVehicle]!["averageDeliveries"]!.toStringAsFixed(0)}",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Efficiency Score Display using Radial Gauge
-            Text("Efficiency Score", style: TextStyle(fontSize: 18)),
+            const Text("Efficiency Score", style: TextStyle(fontSize: 18)),
             SizedBox(
               height: 200,
               child: SfRadialGauge(
@@ -77,7 +79,7 @@ class _VehicleEfficiencyAppState extends State<VehicleEfficiencyApp> {
                       GaugeAnnotation(
                         widget: Text(
                           "${vehicleData[selectedVehicle]!["efficiencyScore"]!.toStringAsFixed(0)}%",
-                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         angle: 90,
                         positionFactor: 0.5,

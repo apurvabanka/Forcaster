@@ -4,6 +4,8 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 
 class WeatherImpactDelivery extends StatefulWidget {
+  const WeatherImpactDelivery({super.key});
+
   @override
   _WeatherImpactDeliveryState createState() => _WeatherImpactDeliveryState();
 }
@@ -38,7 +40,7 @@ class _WeatherImpactDeliveryState extends State<WeatherImpactDelivery> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Weather Slider
-            Text("Select Weather Condition", style: TextStyle(fontSize: 18)),
+            const Text("Select Weather Condition", style: TextStyle(fontSize: 18)),
             Slider(
               value: weatherData[selectedWeather]!,
               min: 20,
@@ -58,15 +60,15 @@ class _WeatherImpactDeliveryState extends State<WeatherImpactDelivery> {
               },
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Dynamic Text Display
             Text(
               "Average Delivery Time: ${weatherData[selectedWeather]} mins",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Scatter Plot
             Expanded(
@@ -80,7 +82,7 @@ class _WeatherImpactDeliveryState extends State<WeatherImpactDelivery> {
                         .toList(),
                     xValueMapper: (ScatterPlotData data, _) => data.weather,
                     yValueMapper: (ScatterPlotData data, _) => data.time,
-                    markerSettings: MarkerSettings(isVisible: true),
+                    markerSettings: const MarkerSettings(isVisible: true),
                   ),
                 ],
               ),

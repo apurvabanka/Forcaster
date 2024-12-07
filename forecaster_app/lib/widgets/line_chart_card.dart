@@ -10,7 +10,7 @@ class LineChartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = LineData();
-  
+
     return CustomCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

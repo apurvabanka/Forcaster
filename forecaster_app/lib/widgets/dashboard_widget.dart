@@ -18,15 +18,25 @@ class DashboardWidget extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 1.1,
           child: const Column(
             children: [
-              SizedBox(height: 18,),
+              SizedBox(
+                height: 18,
+              ),
               Headerwidget(),
-              SizedBox(height: 18,),
+              SizedBox(
+                height: 18,
+              ),
               ActivityDetailsCard(),
-              SizedBox(height: 18,),
+              SizedBox(
+                height: 18,
+              ),
               LineChartCard(),
-              SizedBox(height: 18,),
+              SizedBox(
+                height: 18,
+              ),
               BarGraphCard(),
-              SizedBox(height: 100,),
+              SizedBox(
+                height: 100,
+              ),
             ],
           ),
         ),

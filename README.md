@@ -23,8 +23,20 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 
 ## Folder Structure
 
-- All the reports are present in the `Report` folder. Every file is following the naming convension <First_name>_<Last_name>_<Phase_number>.pdf
-- There are folders named for each individual. The folders follow the naming convension <First_name>. All the codes are inside the folder.
+- `reports`
+    - All the reports are present in the `Report` folder. Every file is following the naming convension <First_name>_<Last_name>_<Phase_number>.pdf
+- `forecaster-analytics`
+    - This folder contains all the data cleaning, EDA, hypothesis and Modeling code in the IPYNB file.    
+    - There are folders named for each individual. The folders follow the naming convension <First_name>.
+    - All the codes are inside the folder.
+- `forecaster_app`
+    - This folder contians the front-end code for the application.
+    - The code base used is Flutter.
+    - The use case for the hypothesis are included in the UI. You need to navigate to the Analytics Tab.
+- `forecaster_backend`
+    - This folder contians the back-end code for the application.
+    - The code base used is Django.
+    - The code contains the Dataset, Models and API for the hypothesis.
 
 
 # Questions for Apurva Banka
@@ -75,3 +87,17 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
    place and the weather.
  - The file implements Logistic regression, LSTM
  - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Patanjali/Patanjai_Uppugandla_50587096_phase2.ipynb
+
+# Instruction to build the app from the source code
+
+- Make sure you have Docker installed on your machine.
+- Clone the repository.
+```CMD
+git clone https://github.com/apurvabanka/Forcaster.git
+```
+- CD into the cloned folder. Run the below command.
+```CMD
+docker compose up --build
+```
+- This should run the backend and the frontend.
+- Go to the following URL. http://127.0.0.1:3000/
