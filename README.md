@@ -69,7 +69,7 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 
  
  # Questions for Sai Harshitha Karri
- - Hypothesis 1 - In the afternoon time the multiple deliveries are more compare to morning and evening times.
+ - Hypothesis 1 -The multiple deliveries are among afternoon, morning and evening times.
    - code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Harshita/Harshitha_DIC_project_phase_2.ipynb
    - In this file implemented ANOVA from outside of the class
    - In this file implemented KNN from the class
