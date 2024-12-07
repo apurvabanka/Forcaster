@@ -17,7 +17,7 @@ class ClusteringController extends GetxController {
 
   void fetchData() async {
     Map<String, dynamic> json =
-        await fetchJsonData("http://127.0.0.1:8000/list-clustering-results/");
+        await fetchJsonData("http://127.0.0.1:8080/list-clustering-results/");
 
     List<dynamic> pointsFromJson = json['results'];
 

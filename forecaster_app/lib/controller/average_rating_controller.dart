@@ -26,7 +26,7 @@ class AverageRatingController extends GetxController {
 
   void fetchData(double x) async {
     Map<String, dynamic> jsonData =
-        await fetchJsonData('http://127.0.0.1:8000/list-regression-results/');
+        await fetchJsonData('http://127.0.0.1:8080/list-regression-results/');
     List<dynamic> coefficients = jsonData['results'][0]['coefficients'];
     double intercept = jsonData['results'][0]['intercept'];
 

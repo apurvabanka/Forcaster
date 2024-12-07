@@ -9,14 +9,16 @@ services:
       - "3000:80"
     depends_on:
       - backend
+    image: us-east1-docker.pkg.dev/computer-security-442722/forecaster/forecaster_app:tag1
 
   backend:
     build:
       context: ./forecaster_backend
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8080:8080"
     volumes:
       - ./forecaster_backend:/app
     environment:
       - DEBUG=True
+    image: us-east1-docker.pkg.dev/computer-security-442722/forecaster/forecaster_backend:tag1

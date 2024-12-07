@@ -17,6 +17,10 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+    port = os.environ.get("PORT", "8080")
+    if len(sys.argv) == 1:
+        sys.argv += ["runserver", f"0.0.0.0:{port}"]
+
 
 if __name__ == '__main__':
     main()
