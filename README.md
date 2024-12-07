@@ -45,6 +45,12 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 
 ![Video Preview](demo_video.mov)
 
+<video width="600" controls>
+    <source src="demo_video.mov" type="video/mov">
+    Your browser does not support the video tag.
+</video>
+
+
 # Questions for Apurva Banka
 - Hypothesis 1 - If the time taken for the order increases, the average rating decreases.
    - Code Analysis - https://github.com/apurvabanka/Forcaster/blob/main/Apurva/regression_for_rating.ipynb
