@@ -39,6 +39,9 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
     - The code base used is Django.
     - The code contains the Dataset, Models and API for the hypothesis.
 
+# Demo Video
+
+- A demo video is included in the repository by the name `demo_video.mov`.
 
 # Questions for Apurva Banka
 - Hypothesis 1 - If the time taken for the order increases, the average rating decreases.
