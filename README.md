@@ -95,7 +95,7 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 ```CMD
 git clone https://github.com/apurvabanka/Forcaster.git
 ```
-- Run the below command.
+- CD into the cloned folder. Run the below command.
 ```CMD
 docker compose up --build
 ```
