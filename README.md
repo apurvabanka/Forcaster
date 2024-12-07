@@ -24,7 +24,8 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
 ## Folder Structure
 
 - `reports`
-    - All the reports are present in the `Report` folder. Every file is following the naming convension <First_name>_<Last_name>_<Phase_number>.pdf
+    - All the reports are present in the `reports` folder. Every file is following the naming convension <First_name>_<Last_name>_<Phase_number>.pdf
+    - There is a final report present inside the `reports` folder by the name `FINAL_REPORT.pdf`. This should have the compilation of all the phases.
 - `forecaster-analytics`
     - This folder contains all the data cleaning, EDA, hypothesis and Modeling code in the IPYNB file.    
     - There are folders named for each individual. The folders follow the naming convension <First_name>.
