@@ -28,7 +28,11 @@ SECRET_KEY = 'django-insecure-g_9d0ta2v_gvop79e!7^nu(#3zf04f_%04#*chhy&i#n%+)74t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://forecasterbackend-531626027781.us-east1.run.app"
+]
 
 PORT = os.environ.get("PORT", 8080)
 
