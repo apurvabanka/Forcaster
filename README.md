@@ -1,6 +1,6 @@
 # Demo Video
 
-- A demo video is included in the repository by the name `demo_video.mov`.
+- A demo video is included in the repository by the name `demo_video.mov`. The below GIF is a shorter version of the complete video.
 
 ![Video Preview](demo_video_new.gif)
 
