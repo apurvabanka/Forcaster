@@ -1,3 +1,14 @@
+# Demo Video
+
+- A demo video is included in the repository by the name `demo_video.mov`.
+
+![Video Preview](demo_video.gif)
+
+<video width="600" controls>
+    <source src="demo_video.mov" type="video/mov">
+    Your browser does not support the video tag.
+</video>
+
 ## Members
 
 | Name                 | UB ID     |
@@ -38,17 +49,6 @@ Link - https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset/data
     - This folder contians the back-end code for the application.
     - The code base used is Django.
     - The code contains the Dataset, Models and API for the hypothesis.
-
-# Demo Video
-
-- A demo video is included in the repository by the name `demo_video.mov`.
-
-![Video Preview](demo_video.mov)
-
-<video width="600" controls>
-    <source src="demo_video.mov" type="video/mov">
-    Your browser does not support the video tag.
-</video>
 
 
 # Questions for Apurva Banka
