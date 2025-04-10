@@ -2,7 +2,7 @@
 
 - A demo video is included in the repository by the name `demo_video.mov`.
 
-![Video Preview](demo_video.gif)
+![Video Preview](demo_video_new.gif)
 
 <video width="600" controls>
     <source src="demo_video.mov" type="video/mov">
